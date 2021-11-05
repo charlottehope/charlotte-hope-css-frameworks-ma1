@@ -1,0 +1,16 @@
+$font: "open sans", sans-serif;
+$tablet-width: 768px;
+
+$colors: (
+    medium-red-violet: #C32C72,
+    alabaster: #F4F3EE,
+    whisper: #E5E5E5,
+    white: #FFFFFF,
+    taupe: #463F3A,
+    nero: #262626,
+    suva grey: #8D8D8D,
+);
+
+@function getColor($color) {
+    @return map-get($colors, $color);
+}

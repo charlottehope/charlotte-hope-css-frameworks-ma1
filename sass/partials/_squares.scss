@@ -1,0 +1,26 @@
+.squares {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 264px);
+    margin: 32px 16px;
+    grid-gap: 24px;
+    justify-content: center;
+
+    &__item {
+        border-radius: 5%;
+        padding-top: 100%;
+        background-color: getColor(alabaster);
+        position: relative;
+        filter: drop-shadow(0px 6px 12px rgba(0, 0, 0, 0.007));
+        
+        &--pink {
+            @extend .squares__item;
+            border: none;
+            background-color: getColor(medium-red-violet);
+        }
+        &--white {
+            @extend .squares__item;
+            border: 3px solid getColor(medium-red-violet);
+            background-color: getColor(white);
+        }
+    }
+}
